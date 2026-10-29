@@ -1,0 +1,84 @@
+body {
+    font-family: 'Fira Code';
+    background-color: black;
+    color: brown;
+    text-align: center;
+    font-size: 2rem;
+}
+
+div {
+    padding: 5%;
+    padding-top: 5%;
+}
+
+::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: brown;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: brown;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50vh;
+    padding: 50vh 0;
+}
+
+
+/* Keyframe animation for enter, center focus, and exit */
+
+@keyframes focusFade {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    35%,
+    65% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+}
+
+.fade-box {
+    padding: 3rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+    /* Scroll-driven animation config */
+    animation: focusFade linear both;
+    animation-timeline: view();
+    /* Animation spans from when element enters bottom to when it leaves top */
+    animation-range: entry 0% exit 100%;
+}
+
+
+/* Inner text automatically syncs with the parent container's opacity */
+
+.fade-box h2,
+.fade-box p {
+    opacity: inherit;
+}

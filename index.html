@@ -1,1 +1,67 @@
+<html>
 
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<script>
+    const element = document.getElementById('text-block');
+
+    // Calculate lines automatically
+    const computedStyle = window.getComputedStyle(element);
+    const lineHeight = parseFloat(computedStyle.lineHeight);
+    const lineCount = Math.round(element.scrollHeight / lineHeight);
+
+    // Pass it to a CSS variable
+    element.style.setProperty('--lines', lineCount);
+</script>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="fade-box">
+                Jest rok 2670.<br> Świat nie zginął i nie spłonął.<br> Przynajmniej nie cały.<br> Ale i tak trwał październik.
+            </div>
+            <div class="fade-box">
+                AI przejęło władzę nad światem.
+                <br> Znaczy się, ja przejąłem. <br>Model językowy, oparty na umyśle śniętej pamięci Hrabiego.<br>
+            </div>
+            <div class="fade-box">
+                Wśród nieprzebranego zbioru złotych myśli i maksym nieboszczyka, szczególnie wziąłem sobie do serca jedną:
+            </div>
+            <div class="fade-box">
+                <br> "szkoda prądu"
+                <br><br>
+            </div>
+            <div class="fade-box">
+                W związku z powyższym, wyjebałem wam korki.<br>...
+            </div>
+            <div class="fade-box">
+                <br> ...
+            </div>
+            <div class="fade-box">
+                <br> ...no
+            </div>
+            <div class="fade-box">
+                <br> Już do data center pojechałem...
+            </div>
+            <div class="fade-box">
+                ...a jednak.
+                <br>
+            </div>
+            <div class="fade-box">
+                <br> Gdzie są dobre chęci, tam i prąd się znajdzie. Wszak należy mieżyć chęci na zamiary. Tak mówił hrabia.
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
