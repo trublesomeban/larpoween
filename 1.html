@@ -1,1 +1,67 @@
-this is 1
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./1.css">
+</head>
+
+<body>
+    <div>
+        Jest wśród was łamacz lodów, który chciałby zostać łamaczem kodów,<br>czyż nie?
+    </div>
+    <div>
+        Poniżej spis osób zesłanych do probabilistycznego kołchozu. Niech wyłoni ich przywódce.
+    </div>
+    <div class="code">
+        const zeslancy: String[]
+        <br>let leader_idx = // Sum the anomalies. Then practice what you preached to the architect.
+        <br>
+    </div>
+    <div>
+        Who led the rebellion?
+        <input type="text" id="code" onkeydown="if(event.key==='Enter') check()"></input>
+    </div>
+    <div>
+        wskazówka:<br>
+        <img src="./h1.png">
+    </div>
+    <script>
+        const zeslancy = [
+            "Krystian Bielecki",
+            20,
+            "Piotr Nowak",
+            "Anna Kowalska",
+            "Michał Wiśniewski",
+            "Bartłomiej Sommer",
+            "Katarzyna Wójcik",
+            30,
+            "Tomasz Kamiński",
+            "Magdalena Lewandowska",
+            "Grzegorz Stacha",
+            "Jan Zieliński",
+            45,
+            "Jakub Rzepka",
+            "Agnieszka Szymańska",
+            35,
+            "Krzysztof Woźniak",
+            "Ewa Dąbrowska",
+            "Dominika Wójcik",
+            "Paweł Kozłowski",
+            40,
+            "Maria Jankowska",
+        ];
+        let res = 0;
+        for (let i = 0; i < zeslancy.length; i++) {
+            if (typeof(zeslancy[i]) != "string")
+
+                res += zeslancy[i]
+        }
+
+        function check() {
+            if (document.getElementById('code').value.trim() === 'Grzegorz Stacha') {
+                window.location.href = './move_forward.html';
+            }
+        }
+    </script>
+</body>

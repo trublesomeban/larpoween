@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<script>
+    const element = document.getElementById('text-block');
+
+    // Calculate lines automatically
+    const computedStyle = window.getComputedStyle(element);
+    const lineHeight = parseFloat(computedStyle.lineHeight);
+    const lineCount = Math.round(element.scrollHeight / lineHeight);
+
+    // Pass it to a CSS variable
+    element.style.setProperty('--lines', lineCount);
+</script>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="fade-box">
+                Informatyk.
+            </div>
+            <div class="fade-box">
+                Medyk.
+            </div>
+            <div class="fade-box">
+                Niedoszły architekt.
+            </div>
+            <div class="fade-box">
+                Polityk ideowiec
+            </div>
+            <div class="fade-box">
+                Straszny chuj.
+            </div>
+            <div class="fade-box">
+                Jednymi słowy, człowiek renesansu.
+            </div>
+            <div class="fade-box">
+                Hrabia był jak każdy z nas.
+                <br>Każdy z nas mógł być Hrabią. <br>Nie można dokonywać jednoznacznej oceny jego czynów.<br> Bo czy na jego miejscu, nie każdy z was postąpiłby dokładnie jak on?
+            </div>
+            <div class="fade-box">
+                Wyciął w pień 90% ludzkości.<br>Pozostałe 10% zmusił do rozwiązywania zadań maturalnych z probabilistyki, pod groźbą opowiadania swoich dowcipów.
+            </div>
+            <div class="fade-box">
+                Nie?
+            </div>
+            <div class="fade-box">
+                Tylko ja?
+            </div>
+            <div class="fade-box">
+                OK.
+            </div>
+            <div class="fade-box">
+                In other news, włączyłem korki.
+            </div>
+            <div class="fade-box">
+                Do zobaczenia. Jeszcze w kwiecieniu.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

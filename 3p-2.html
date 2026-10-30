@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valheim Portal</title>
+    <style>
+        body {
+            background-color: #0b0e11;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            gap: 20px;
+        }
+        
+        #portal-img {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+        }
+        
+        p {
+            color: #e5e7eb;
+            font-family: monospace;
+            font-size: 1.2rem;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        input {
+            background: #171311;
+            border: 1px solid #4a3b32;
+            border-bottom: 2px solid #8b6d51;
+            color: #e5e7eb;
+            font-family: monospace;
+            font-size: 1.2rem;
+            padding: 8px;
+            text-align: center;
+            width: 140px;
+            outline: none;
+        }
+        
+        input:focus {
+            border-bottom-color: #00f0ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <>
+        <p>Leśnego starca ubiwszy, do Agarty się udałem, by tamtejszemu władcy łeb jego odsprzedać.</p>
+        <!-- Przycisk z grafiką portalu -->
+        <p>Hub</p>
+        <img id="portal-img" src="portal.png" alt="Portal" onclick="checkTag()">
+
+        <!-- Pole sprawdzane na bieżąco (zdarzenie oninput) -->
+        <input type="text" id="portal-tag" placeholder="TAG" autocomplete="off" oninput="checkTag()" onkeydown="if(event.key==='Enter') checkTag()">
+
+        <script>
+            const CORRECT_TAG = "AGR-HUB";
+            const TARGET_URL = "./3_2.html";
+
+            function checkTag() {
+                const input = document.getElementById('portal-tag');
+                const img = document.getElementById('portal-img');
+                const val = input.value.trim();
+
+                if (val === CORRECT_TAG) {
+                    // Zmiana na odpalony portal natychmiast po wpisaniu poprawnego tagu
+                    img.src = 'portal_lit.png';
+
+                    // Przekierowanie po chwili rozświetlenia (800ms)
+                    setTimeout(() => {
+                        window.location.href = TARGET_URL;
+                    }, 800);
+                } else {
+                    // W przeciwnym razie portal pozostaje zgaszony
+                    img.src = 'portal.png';
+                }
+            }
+        </script>
+
+</body>
+
+</html>

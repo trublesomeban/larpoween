@@ -1,1 +1,92 @@
-this is 3
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kronika Pańska</title>
+    <style>
+        body {
+            background-color: #f4e8c1;
+            color: #2b1e16;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .chronicle {
+            background-color: #fff9e6;
+            border: 2px solid #5c3a21;
+            border-radius: 4px;
+            box-shadow: 0 0 25px rgba(43, 30, 22, 0.25), inset 0 0 40px rgba(139, 90, 43, 0.15);
+            max-width: 550px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        p::first-letter {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #8b0000;
+            font-style: normal;
+        }
+        
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #5c3a21;
+            color: #2b1e16;
+            font-family: inherit;
+            font-size: 1.3rem;
+            padding: 5px;
+            text-align: center;
+            width: 120px;
+            outline: none;
+        }
+        
+        button {
+            background-color: #5c3a21;
+            color: #f4e8c1;
+            border: none;
+            padding: 8px 18px;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 2px;
+        }
+        
+        button:hover {
+            background-color: #8b0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chronicle">
+        <span>Ustęp tekstu pochodzący z XV wiecznych czech:</span>
+        <p>Chciał wznieść kielich tym pod sobą.<br> Teraz jego wznosi wiatr.<br> Mamy rok pański <input type="text" id="code" placeholder="____" onkeydown="if(event.key==='Enter') check()"></p>
+
+
+    </div>
+
+    <script>
+        function check() {
+            if (document.getElementById('code').value.trim() === '60') {
+                window.location.href = './3p-1.html';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+/* Reset i podstawowe ustawienia */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+
+/* Pojemnik na czysty dokument tekstowy */
+
+.dokument-pojemnik {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Nagłówek dokumentu */
+
+.naglowek-glowny {
+    border-bottom: 2px solid #111;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.tytul-dokumentu {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.podtytul-dokumentu {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* Blok paragrafu / sekcji tekstu */
+
+.sekcja-tekstowa {
+    margin-bottom: 25px;
+}
+
+.naglowek-sekcji {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+}
+
+.tresc-paragrafu {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+/* Puste pole do własnoręcznego uzupełnienia w linii tekstu */
+
+.pusta-linia-do-wpisania {
+    display: inline-block;
+    min-width: 80px;
+    border-bottom: 1px solid #111;
+    margin: 0 5px;
+}
+
+
+/* Pusty ramkowy obszar na dłuższą uwagą lub notatkę */
+
+.pusta-ramka-na-uwagi {
+    border: 1px dashed #999;
+    min-height: 90px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+
+/* Sekcja podpisu na dole */
+
+.sekcja-podpisu {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.linia-podpisu {
+    width: 220px;
+    text-align: center;
+    border-top: 1px solid #111;
+    padding-top: 5px;
+    font-size: 0.85rem;
+    color: #444;
+}

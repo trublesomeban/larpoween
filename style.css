@@ -82,3 +82,10 @@ div {
 .fade-box p {
     opacity: inherit;
 }
+
+input {
+    background-color: transparent;
+    color: brown;
+    text-align: center;
+    border: 2px solid yellowgreen;
+}
