@@ -225,13 +225,13 @@
 
             if (val === CORRECT_CODE) {
                 status.className = "success";
-                status.innerText = "Protokół poprawny. Przekierowywanie...";
+                status.innerText = "Kod poprawny. Przekierowywanie...";
                 setTimeout(() => {
                     window.location.href = TARGET_URL;
                 }, 600);
             } else if (val.length >= CORRECT_CODE.length) {
                 status.className = "error";
-                status.innerText = "Niepoprawny kod protokołu.";
+                status.innerText = "Niepoprawny kod.";
             } else {
                 status.innerText = "";
             }
