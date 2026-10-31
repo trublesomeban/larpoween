@@ -69,12 +69,17 @@
         function checkAll() {
             let inputs = []
             for (let i = 0; i < 5; i++) {
-                inputs[i] = document.getElementById(`${i+1}`)
+                inputs[i] = document.getElementById(`${i+1}`).value
             }
+            console.log(inputs)
             const correct = ["Grzegorz Stacha", "7738", "60", "7354", "2341"]
-            if (inputs == correct) {
-                window.location.href = "./index2.html"
+            let corr = 0
+            for (let i = 0; i < 5; i++) {
+                if (inputs[i] == correct[i]);
+                corr++
             }
+            if (corr == 5)
+                window.location.href = "./index2.html"
         }
         const zeslancy = [
             "Krystian Bielecki",
