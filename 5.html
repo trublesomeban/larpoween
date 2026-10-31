@@ -1,1 +1,209 @@
-this is 5
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Moczenie Kija - Blog Wędkarski</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #12181b;
+            color: #d1d5db;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
+        
+        .blog-container {
+            background-color: #1e262b;
+            border: 1px solid #2e3a42;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 750px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .blog-header {
+            background: #141b1f;
+            padding: 40px 30px;
+            border-bottom: 3px solid #2b8a3e;
+            text-align: center;
+        }
+        
+        .blog-header h1 {
+            font-size: 2rem;
+            color: #51cf66;
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .blog-header p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-style: italic;
+        }
+        
+        .blog-post {
+            padding: 30px;
+        }
+        
+        .post-meta {
+            font-size: 0.8rem;
+            color: #2b8a3e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .post-title {
+            font-size: 1.4rem;
+            color: #f1f5f9;
+            margin-bottom: 20px;
+        }
+        
+        .post-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            background-color: #161e23;
+            border-top: 1px solid #2e3a42;
+            padding: 25px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        /* type="search" obsługuje mobilne przyciski "Go/Enter" bez znacznika <form> */
+        
+        input[type="search"] {
+            background: #0f1417;
+            border: 1px solid #2e3a42;
+            border-bottom: 2px solid #2b8a3e;
+            border-radius: 4px;
+            color: #51cf66;
+            font-family: monospace;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            text-align: center;
+            width: 150px;
+            outline: none;
+        }
+        
+        input[type="search"]:focus {
+            border-bottom-color: #51cf66;
+        }
+        
+        button {
+            background-color: #2b8a3e;
+            color: #ffffff;
+            border: none;
+            padding: 9px 20px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: #237032;
+        }
+        
+        #status {
+            font-size: 0.85rem;
+            min-height: 20px;
+        }
+        
+        .error {
+            color: #f87171;
+        }
+        
+        .success {
+            color: #51cf66;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blog-container">
+        <header class="blog-header">
+            <!-- MIEJSCE NA NAZWĘ BLOGA -->
+            <h1>ZAPIERDOL.PL</h1>
+            <p>Nie boisz się szczytów? To zapierdol coś komuś.</p>
+        </header>
+
+        <article class="blog-post">
+            <div class="post-meta">Zlecenie #142</div>
+            <!-- MIEJSCE NA TYTUŁ WPISU -->
+            <h2 class="post-title">Figurka Wenus z Willendorfu</h2>
+            Chciałbym obejrzeć ją na żywo, ale za bilet trzeba <b>słono</b> zapłacić. Jako dowód zainteresowania zleceniem, przyślij nazwę muzeum w którym ona się znajduje, oraz kod dostępu do drzwi serwisowych.
+            <br>PS.
+            <br>Podobno kustosz, Mathias Wagner, jest fanatykiem wędkarstwa i prowadzi nawet blog na Facebooku.
+            <div class="post-content">
+                <!-- TUTAJ WPISUJESZ SWÓJ TEKST ZAGADKI -->
+            </div>
+        </article>
+        <div style="background:#141b1f; border:1px solid #2e3a42; border-top:2px solid #2b8a3e; border-radius:6px; padding:20px; margin-top:30px; font-family:'Segoe UI',sans-serif;">
+            <label style="color:#94a3b8; font-size:0.9rem; display:block; margin-bottom:12px;">Wyślij prywatną wiadomość do autora:</label>
+
+            <input type="text" id="pm-text" placeholder="Treść wiadomości..." autocomplete="off" style="width:100%; background:#0f1417; border:1px solid #2e3a42; border-radius:4px; color:#cbd5e1; font-size:0.95rem; padding:10px 14px; outline:none; margin-bottom:10px; box-sizing:border-box;">
+
+            <div style="display:flex; gap:10px;">
+                <input type="search" id="pm-code" placeholder="KOD" maxlength="4" autocomplete="off" oninput="checkPM()" onchange="checkPM()" onkeyup="if(event.key==='Enter'||event.keyCode===13) checkPM()" style="width:120px; background:#0f1417; border:1px solid #2e3a42; border-bottom:2px solid #2b8a3e; border-radius:4px; color:#51cf66; font-family:monospace; font-size:1rem; padding:10px; text-align:center; outline:none;">
+
+                <button onclick="checkPM()" style="flex:1; background:#2b8a3e; color:#fff; border:none; padding:10px; font-size:0.9rem; font-weight:bold; border-radius:4px; cursor:pointer;">Wyślij wiadomość</button>
+            </div>
+
+            <div id="status" style="font-size:0.85rem; min-height:18px; margin-top:10px;"></div>
+        </div>
+
+        <script>
+            // TUTAJ USTAWIASZ POPRAWNE WARTOŚCI:
+            const CORRECT_CODE = "2341";
+            const CORRECT_TEXT = "muzeum historii naturalnej w wiedniu"; // ustaw wymaganą treść (lub pozostaw "", jeśli treść ma być dowolna)
+            const TARGET_URL = "./move_forward_2.html";
+
+            function checkPM() {
+                const codeVal = document.getElementById('pm-code').value.trim();
+                const textVal = document.getElementById('pm-text').value.trim().toLowerCase();
+                const status = document.getElementById('status');
+
+                const isCodeOk = codeVal === CORRECT_CODE;
+                const isTextOk = !CORRECT_TEXT || textVal === CORRECT_TEXT.toLowerCase();
+
+                if (isCodeOk && isTextOk) {
+                    status.style.color = "#51cf66";
+                    status.innerText = "Wiadomość wysłana! Przekierowywanie...";
+                    setTimeout(() => window.location.href = TARGET_URL, 600);
+                } else if (codeVal.length >= 4) {
+                    status.style.color = "#f87171";
+                    status.innerText = "Niepoprawny kod lub treść wiadomości.";
+                } else {
+                    status.innerText = "";
+                }
+            }
+        </script>
+
+</body>
+
+</html>
